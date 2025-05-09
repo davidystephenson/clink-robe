@@ -47,7 +47,7 @@
     "react-dom": ">=18.0.0"
   },
   "dependencies": {
-    "clink-react": "^0.2.13",
+    "clink-react": "^0.2.14",
     "robes": "^0.1.0"
   },
   "devDependencies": {
@@ -59,6 +59,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "react-router-dom": "^7.6.0",
     "ts-standard": "^12.0.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
