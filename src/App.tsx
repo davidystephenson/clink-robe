@@ -1,17 +1,22 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { RobesProvider } from "robes"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Heading } from "@chakra-ui/react"
 import ClinkRobe from "./ClinkRobe"
+import { ColorSwitchRobe, RobesProvider } from "robes"
 
 function App() {
   return (
-    <BrowserRouter>
-      <RobesProvider>
+    <RobesProvider>
+      <BrowserRouter>
+        <ColorSwitchRobe />
+        <Heading>Hello World</Heading>
         <ClinkRobe to="/">Home</ClinkRobe>
+        <ClinkRobe to="/test">Test</ClinkRobe>
         <Routes>
-          <Route path="/" element={<>Hello World</>} />
+          <Route path="/" element={<div>Home</div>} />
+          <Route path="/test" element={<div>Test</div>} />
         </Routes>
-      </RobesProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </RobesProvider>
   )
 }
 

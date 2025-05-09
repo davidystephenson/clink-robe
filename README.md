@@ -13,17 +13,21 @@ npm install clink-robe
 ```tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ClinkRobe } from "clink-robe"
+import { RobesProvider, ColorSwitchRobe } from "robes"
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <RobesProvider>
+    <RobesProvider>
+      <BrowserRouter>
+        <ColorSwitchRobe />
         <ClinkRobe to="/">Home</ClinkRobe>
+        <ClinkRobe to="/test">Test</ClinkRobe>
         <Routes>
-          <Route path="/" element={<>Hello World</>} />
+          <Route path="/" element={<>Home</>} />
+          <Route path="/test" element={<>Test</>} />
         </Routes>
-      </RobesProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </RobesProvider>
   )
 }
 ```

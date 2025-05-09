@@ -1,9 +1,21 @@
-import Clink from "clink-react";
-import { LinkRobe } from "robes";
-import type { ClinkRobeProps } from "./types";
+import { type JSX } from 'react'
+import { type ClinkRobeProps } from './types'
+import { useLinkRobeColor } from 'robes'
+import { Link } from '@chakra-ui/react'
+import { Link as RouterLink, useLocation } from 'react-router-dom'
 
-export default function ClinkRobe(props: ClinkRobeProps) {
+export function ClinkRobe(
+  props: ClinkRobeProps
+): JSX.Element {
+  const location = useLocation()
+  const routeActive = location.pathname === props.to
+  const active = props.active ?? routeActive
+  const color = useLinkRobeColor({ ...props, active })
   return (
-    <Clink View={LinkRobe} {...props} />
+    <Link as={RouterLink} {...props} color={color}>
+      {props.children}
+    </Link>
   )
 }
+
+export default ClinkRobe
