@@ -1,8 +1,8 @@
 import { ButtonRobe } from "robes"
-import { ButtonClinkRobe } from "./ButtonClinkRobe"
 import type { ButtonClinkableRobeProps } from "./types"
+import ButtonClinkRobe from "./ButtonClinkRobe"
 
-export const ButtonClinkableRobe = (props: ButtonClinkableRobeProps) => {
+export default function ButtonClinkableRobe (props: ButtonClinkableRobeProps) {
   if (props.href == null) {
     return <ButtonRobe {...props.button} />
   }

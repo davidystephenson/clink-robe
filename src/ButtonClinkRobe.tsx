@@ -3,7 +3,7 @@ import { ButtonRobe } from "robes"
 import useActive from "./useActive"
 import { Link, Link as RouterLink } from "react-router-dom"
 
-export const ButtonClinkRobe = (props: ButtonClinkRobeProps) => {
+export default function ButtonClinkRobe (props: ButtonClinkRobeProps) {
   const { button, children, ...rest } = props
   const active = useActive(props)
   return (

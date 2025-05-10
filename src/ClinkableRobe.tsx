@@ -1,7 +1,7 @@
 import ClinkRobe from "./ClinkRobe"
 import type { ClinkableRobeProps } from "./types"
 
-export const ClinkableRobe = (props: ClinkableRobeProps) => {
+export default function ClinkableRobe (props: ClinkableRobeProps) {
   if (props.href == null) {
     return <>{props.children}</>
   }

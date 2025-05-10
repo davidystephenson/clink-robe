@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Heading } from "@chakra-ui/react"
 import ClinkRobe from "./ClinkRobe"
 import { ColorSwitchRobe, RobesProvider } from "robes"
-import { ButtonClinkRobe } from "./ButtonClinkRobe"
+import ButtonClinkRobe from "./ButtonClinkRobe"
 
 function App() {
   return (
