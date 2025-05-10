@@ -2,7 +2,7 @@
   "name": "clink-robe",
   "description": "A Chakra UI v2 and react-router-dom link for the robes UI library",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
