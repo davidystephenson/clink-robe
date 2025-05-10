@@ -1,18 +1,18 @@
 import { type JSX } from 'react'
 import { type ClinkRobeProps } from './types'
-import { useLinkRobeColor } from 'robes'
+import { useLinkRobe } from 'robes'
 import { Link } from '@chakra-ui/react'
-import { Link as RouterLink, useLocation } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import useActive from './useActive'
 
 export function ClinkRobe(
   props: ClinkRobeProps
 ): JSX.Element {
-  const location = useLocation()
-  const routeActive = location.pathname === props.to
-  const active = props.active ?? routeActive
-  const color = useLinkRobeColor({ ...props, active })
+  const active = useActive(props)
+  const link = useLinkRobe({ ...props, active })
+
   return (
-    <Link as={RouterLink} {...props} color={color}>
+    <Link as={RouterLink} {...props} {...link}>
       {props.children}
     </Link>
   )

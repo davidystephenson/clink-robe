@@ -21,10 +21,13 @@ export default function App() {
       <BrowserRouter>
         <ColorSwitchRobe />
         <ClinkRobe to="/">Home</ClinkRobe>
-        <ClinkRobe to="/test">Test</ClinkRobe>
+        <ClinkableRobe to="/test">Test</ClinkableRobe>
+        <ButtonClinkRobe to="/test">Test</ButtonClinkRobe>
+        <ButtonClinkableRobe to="/test">Test</ButtonClinkableRobe>
         <Routes>
           <Route path="/" element={<>Home</>} />
           <Route path="/test" element={<>Test</>} />
+          <Route path="/register" element={<>Register</>} />
         </Routes>
       </BrowserRouter>
     </RobesProvider>
